@@ -11,7 +11,11 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const path = require("path")
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://newadmin-03hk.onrender.com', // Allow requests from this specific origin
+  methods: ['GET', 'POST'], // Allow GET and POST requests
+  allowedHeaders: ['Content-Type'], // Allow the Content-Type header
+}));
 app.use(express.json());
 app.use(express.static(path.join(__dirname+"/public")))
 
