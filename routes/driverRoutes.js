@@ -19,10 +19,10 @@ const Report = mongoose.model('Driver', driverSchema);
 
 router.get('/', async (req, res) => {
   try {
-    const reports = await Report.find();
-    res.json(reports);
+    const chargers = await Report.find();
+    res.json(chargers);
   } catch (error) {
-    console.log("bleh");
+    console.error("Error fetching chargers:", error);
     res.status(500).json({ message: error.message });
   }
 });

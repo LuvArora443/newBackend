@@ -2,7 +2,7 @@
 
 const mongoose = require('mongoose');
 
-const chargerSchema = new mongoose.Schema({
+const driverSchema = new mongoose.Schema({
     id: Number,
     name:String,
     phone:Number,
@@ -10,4 +10,4 @@ const chargerSchema = new mongoose.Schema({
   });
   
 
-module.exports = mongoose.model('Charger', chargerSchema);
+module.exports = mongoose.model('Driver', driverSchema);
